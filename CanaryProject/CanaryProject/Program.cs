@@ -10,7 +10,7 @@ namespace CanaryProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hi");
+            
         }
     }
 }

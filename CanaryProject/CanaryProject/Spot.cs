@@ -1,10 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CanaryProject {
-    internal class Spot {
+    public class Spot {
+        private int size = 0;
+        private Vehicle vehicle = null;
+        
+        public Spot(int size) {
+            this.size = size;
+        }
+
+        public Vehicle GetVehicle() {
+            return vehicle;
+        }
+
+        public void SetVehicle(Vehicle vehicle) {
+            this.vehicle = vehicle;
+        }
+
+        public int GetSize() {
+            return size;
+        }
     }
+
+    
 }

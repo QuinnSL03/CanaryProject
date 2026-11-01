@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CanaryProject {
-    internal class Car {
+    public class Car : Vehicle {
+        public Car(string licensePlate) {
+            SetSize(1);
+            SetLicensePlate("licensePlate");
+        }
     }
 }
