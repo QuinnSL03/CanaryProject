@@ -25,6 +25,15 @@ namespace CanaryProject {
         public int GetSize() {
             return size;
         }
+
+        public string Status() {
+            if (GetVehicle() == null) {
+                return "Empty";
+            }
+            else {
+                return vehicle.GetName();
+            }
+        }
     }
 
     

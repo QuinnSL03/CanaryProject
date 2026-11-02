@@ -28,6 +28,10 @@ namespace CanaryProject {
             ParkingGarage.GetGarage().AddSpot(floor, size);
         }
 
+        public static void CreateFloor() {
+            ParkingGarage.GetGarage().AddFloor();
+        }
+
 
             
     }

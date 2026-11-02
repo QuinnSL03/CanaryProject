@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 public abstract class Vehicle {
 
-    private int size = 0;
-    private string licensePlate = "";
+    private int size;
+    private string licensePlate;
+    private string name;
+    private DateTime startParkTime;
     public Vehicle() {
 
     }
@@ -19,6 +22,22 @@ public abstract class Vehicle {
     public string GetLicensePlate(string licensePlate) {
         return licensePlate;
     }
+
+    public String GetName() {
+        return name;
+    }
+
+    public void SetName(String name) {
+        this.name = name;
+    }
+
+    public void SetParkTime(DateTime parkTime) {
+        DateTime startParkTime = parkTime;
+    }
+    public DateTime GetParkTime() {
+        return  startParkTime;
+    }
+
 
 
 }
