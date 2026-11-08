@@ -2,8 +2,9 @@
 
 namespace CanaryProject {
     public class Bike : Vehicle {
-        public Bike(string licensePlate) {
+        public Bike() {
             SetSize(0);
+            SetType(0);
             SetName("Bike");
         }
     }

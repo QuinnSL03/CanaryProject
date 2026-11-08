@@ -6,7 +6,8 @@ public abstract class Vehicle {
     private int size;
     private string licensePlate;
     private string name;
-    private DateTime startParkTime;
+    private int vehicleType;
+ 
     public Vehicle() {
 
     }
@@ -19,7 +20,10 @@ public abstract class Vehicle {
     public void SetLicensePlate(string licensePlate) {
         this.licensePlate = licensePlate;
     }
-    public string GetLicensePlate(string licensePlate) {
+    public string GetLicensePlate() {
+        if(licensePlate == null) {
+            return "N/A";
+        }
         return licensePlate;
     }
 
@@ -30,12 +34,12 @@ public abstract class Vehicle {
     public void SetName(String name) {
         this.name = name;
     }
-
-    public void SetParkTime(DateTime parkTime) {
-        DateTime startParkTime = parkTime;
+    public int GetType() {
+        return vehicleType;
     }
-    public DateTime GetParkTime() {
-        return  startParkTime;
+
+    public void SetType(int vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
 

@@ -5,7 +5,7 @@ namespace CanaryProject {
         public Car(string licensePlate) {
             SetSize(1);
             SetName("Car");
-            SetLicensePlate("licensePlate");
+            SetLicensePlate(licensePlate);
         }
     }
 }

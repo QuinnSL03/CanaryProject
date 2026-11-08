@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CanaryProject", "CanaryProject", "{6A4A355D-BAB5-BEBC-F688-1E2515F9C74E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanaryProject", "CanaryProject\CanaryProject\CanaryProject.csproj", "{656028A8-2AE4-0878-F970-C730B06E7C61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{656028A8-2AE4-0878-F970-C730B06E7C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656028A8-2AE4-0878-F970-C730B06E7C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656028A8-2AE4-0878-F970-C730B06E7C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656028A8-2AE4-0878-F970-C730B06E7C61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{656028A8-2AE4-0878-F970-C730B06E7C61} = {6A4A355D-BAB5-BEBC-F688-1E2515F9C74E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78DDEC41-5E51-4312-BC85-A62ADE046E26}
+	EndGlobalSection
+EndGlobal
