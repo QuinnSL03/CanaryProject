@@ -4,9 +4,9 @@ Quinn Lindsey
 Language: C#
 
 How to run:
-    Load solution and build.
-    Run Program.cs
-    Inside Main in Program.cs, use the functions provided to carryout the actions.
+   - Load solution and build.
+   - Run Program.cs
+   - Inside Main in Program.cs, use the functions provided to carryout the actions.
 
 
 Design Decisions:
