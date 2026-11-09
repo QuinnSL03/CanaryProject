@@ -15,6 +15,10 @@ namespace CanaryProject{
             return strategy;
         }
 
+        private PriceStrategy() {
+
+        }
+
         public double GetHourlyRate(int vehicleType) {
             return rates[vehicleType];
         }
@@ -39,8 +43,8 @@ namespace CanaryProject{
         public double GenerateTicket(double duration, int vehicleType) { 
             double ticket;
             double dollarPerHour = GetHourlyRate(vehicleType);
-
-            ticket = Math.Round((dollarPerHour * (duration+1)) + fee, 2);
+            double hours = Math.Ceiling(duration);
+            ticket = Math.Round(dollarPerHour * hours + fee, 2);
             Console.WriteLine("\nYour ticket is: ");
             Console.WriteLine("Hours billed: " + Math.Ceiling(duration));
             Console.WriteLine("Hourly rate: $" + dollarPerHour);

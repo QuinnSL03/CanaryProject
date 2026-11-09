@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CanaryProject {
     public class ParkingGarage {
@@ -95,6 +92,10 @@ namespace CanaryProject {
         }
 
         public void AddSpot(int floor, int size) {
+            if(spots.Count <= floor) {
+                Console.WriteLine("Floor does not exist");
+                return;
+            }
             Spot spot = new Spot(size);
             spots[floor].Add(spot);
             Console.WriteLine("Created new Spot at floor: " + floor + " and Size: " + size);

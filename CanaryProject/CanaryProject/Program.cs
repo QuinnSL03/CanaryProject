@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CanaryProject
 {
@@ -23,7 +19,8 @@ namespace CanaryProject
             Factory.CreateFloor();
             Factory.CreateFloor();
 
-            //size 0: small, size 1: medium, size 2: large
+            //size small = 0, medium = 1, large = 2
+            Factory.CreateSpot(3, 1);
             Factory.CreateSpot(0,1);
             Factory.CreateSpot(0,2);
             Factory.CreateSpot(0,1);
@@ -34,7 +31,7 @@ namespace CanaryProject
             Factory.CreateSpot(2, 2);
             Factory.CreateSpot(2, 2);
 
-            //vehicle type 0: bike, type 1: car, type 2: truck
+            //vehicle type 0 = bike, type 1 = car, type 2 = truck
             Factory.CreateVehicle(1, "JTC4393");
             Factory.CreateVehicle(2, "FJ3293");
             Factory.CreateVehicle(1, "293402");
