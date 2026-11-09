@@ -30,7 +30,7 @@ PriceStrategy:
 
 How'd I would extend it:
 
-Add more vehicle types: I can just another class extending Vehicle along with AddHourlyRate of the new vehicle.
+Add more vehicle types: I can just add another class extending Vehicle along with AddHourlyRate of the new vehicle.
 
 Add VIP spots: i'd implement a instance variable for each Spot object & vehicle object that says the tier of the spot & vehicle. 
     It would then only let vehicles with the higher tier be able to park in the Spots with the higher tier.
