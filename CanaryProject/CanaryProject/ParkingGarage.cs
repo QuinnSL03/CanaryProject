@@ -64,11 +64,6 @@ namespace CanaryProject {
         }
 
         public void UnparkVehicle(int spot_floor, int spot_index) {
-            Vehicle vehicle = spots[spot_floor][spot_index].GetVehicle();
-            DateTime startTime = spots[spot_floor][spot_index].GetParkTime();
-            PriceStrategy strategy = PriceStrategy.GetPriceStrategy();
-            TimeSpan duration = DateTime.Now - startTime;
-
             if (spot_floor >= spots.Count || spot_floor < 0) {
                 Console.WriteLine("Parking floor does not exist");
                 return;
@@ -77,13 +72,19 @@ namespace CanaryProject {
                 Console.WriteLine("Spot index does not exist for the selected floor");
                 return;
             }
-            if (vehicle == null) {
+            if (spots[spot_floor][spot_index].GetVehicle() == null) {
                 Console.WriteLine("Parking spot does not have a vehicle");
                 return;
             }
-       
 
-            double ticket = strategy.GenerateTicket(duration.Hours, vehicle.GetType());
+            Vehicle vehicle = spots[spot_floor][spot_index].GetVehicle();
+            DateTime startTime = spots[spot_floor][spot_index].GetParkTime();
+            PriceStrategy strategy = PriceStrategy.GetPriceStrategy();
+            TimeSpan duration = DateTime.Now - startTime;
+
+
+
+            double ticket = strategy.GenerateTicket(duration.TotalHours, vehicle.GetType());
             Console.WriteLine("Sucessfully Unparked " + vehicle.GetName());
             spots[spot_floor][spot_index].SetVehicle(null);
 
@@ -109,12 +110,8 @@ namespace CanaryProject {
             for(int i = 0; i < spots.Count; i++) {
                 Console.WriteLine("\nFloor " + i + ":");
                 for(int j = 0; j < spots[i].Count; j++) {
-                    TimeSpan timespan = spots[i][j].GetParkTime() - DateTime.Now;
-                    int duration = 0;
-                    if (timespan.Hours > 0) {
-                        duration = timespan.Hours;
-                    }
-                    Console.Write("\nSpot: " + j + " Size: " + spots[i][j].GetSize() + " - Occupied By: " + spots[i][j].GetVehicleName() + " - Duration Parked (hr): " + (duration+1));
+ 
+                    Console.Write("\nSpot: " + j + " Size: " + spots[i][j].GetSize() + " - Occupied By: " + spots[i][j].GetVehicleName());
                 }
                 Console.WriteLine("");
             }

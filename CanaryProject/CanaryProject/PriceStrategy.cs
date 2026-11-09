@@ -36,13 +36,13 @@ namespace CanaryProject{
             rates.Add(vehicleType, hourlyRate);
         }
 
-        public double GenerateTicket(int duration, int vehicleType) { 
+        public double GenerateTicket(double duration, int vehicleType) { 
             double ticket;
             double dollarPerHour = GetHourlyRate(vehicleType);
 
             ticket = Math.Round((dollarPerHour * (duration+1)) + fee, 2);
             Console.WriteLine("\nYour ticket is: ");
-            Console.WriteLine("Hours billed: " + (duration + 1));
+            Console.WriteLine("Hours billed: " + Math.Ceiling(duration));
             Console.WriteLine("Hourly rate: $" + dollarPerHour);
             Console.WriteLine("Fee: $" + fee);
             Console.WriteLine("Total amount owed: $" + ticket);
